@@ -5,12 +5,17 @@ PowerBI custom visual to display a 3D scatter using the R package `plotly` (<htt
 
 This visual and walkthrough is based on [this RPubs article by John Friel](https://rpubs.com/jpf5046/313759). 
 
+---
+*Note:*
+Although in this case these steps are used to produce a 3D scatter custom visual the procedure can be use to create any customized R based visual.
+---
+
 These are the basic steps to follow:
 
 1. If not already done, download and install node.js from here <https://nodejs.org/en/>,
 2. Initialize a custom visual package using command line tools,
 3. Edit the R code that comes with the package,
-4. Complie the visual using command line tools again,
+4. Compile the visual using command line tools again,
 5. Import the custom visual into PowerBI.
 
 ## 1. Installing node.js
@@ -33,8 +38,10 @@ To initialize a new custom visual type the following:
 
 When there are no errors you can hit Ctrl+C to stop the process. But don't close the console window yet.
 
-> Note: Use only characters and numbers in your package name since special characters (even '-') can throw errors when `pbiviz start` is executed.
-
+---
+*Note:*
+Use only characters and numbers in your package name since special characters (even '-') can throw errors when `pbiviz start` is executed.
+---
 
 ## 3. Edit the R code
 Now we need to edit the R code script `script.r` that comes with the visual package. It  can be found in the base directory of the package, here: `pbi3Dscatter/`
