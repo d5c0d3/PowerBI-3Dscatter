@@ -1,23 +1,170 @@
 {
   "dataRoles": [
+
     {
-      "displayName": "Values",
+
+      "displayName": "X Values",
+
+      "description": "Numeric variable",
+
       "kind": "GroupingOrMeasure",
-      "name": "Values"
-    }
-  ],
-  "dataViewMappings": [
+
+      "name": "x"
+
+    },
+
     {
+
+      "displayName": "Y values",
+
+      "description": "Numeric variable",
+
+      "kind": "GroupingOrMeasure",
+
+      "name": "y"
+
+    },
+
+    {
+
+      "displayName": "Z values",
+
+      "description": "Numeric variable",
+
+      "kind": "GroupingOrMeasure",
+
+      "name": "z"
+
+    },
+
+    {
+
+      "displayName": "Color",
+
+      "description": "Numeric or factor variable for coloring of the scatter points",
+
+      "kind": "GroupingOrMeasure",
+
+      "name": "color"
+
+    },
+
+    {
+
+      "displayName": "Tooltips",
+
+      "description": "Fields to be used as mouseover tooltips",
+
+      "kind": "Grouping",
+
+      "name": "tooltips"
+
+    }
+
+  ],
+
+   "dataViewMappings": [
+
+    {
+
+      "conditions": [
+
+        {
+
+          "x": {
+
+            "max": 1
+
+          },
+
+          "y": {
+
+            "max": 1
+
+          },
+
+          "z": {
+
+            "max": 1
+
+          },
+
+          "color": {
+
+            "max": 1
+
+          },
+
+          "tooltips": {
+
+            "max": 7
+
+          }
+
+        }
+
+      ],
+
       "scriptResult": {
+
         "dataInput": {
+
           "table": {
+
             "rows": {
+
               "select": [
+
                 {
+
                   "for": {
-                    "in": "Values"
+
+                    "in": "x"
+
                   }
+
+                },
+
+                {
+
+                  "for": {
+
+                    "in": "y"
+
+                  }
+
+                },
+
+                {
+
+                  "for": {
+
+                    "in": "z"
+
+                  }
+
+                },
+
+                {
+
+                  "for": {
+
+                    "in": "color"
+
+                  }
+
+                },
+
+                {
+
+                  "for": {
+
+                    "in": "tooltips"
+
+                  }
+
                 }
+
               ],
               "dataReductionAlgorithm": {
                 "top": {}
