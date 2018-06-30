@@ -6,8 +6,11 @@ PowerBI custom visual to display a 3D scatter using the R package `plotly` (<htt
 This visual and walkthrough is based on [this RPubs article by John Friel](https://rpubs.com/jpf5046/313759). 
 
 ---
-*Note:*
+
+**NOTE**
+
 Although in this case these steps are used to produce a 3D scatter custom visual the procedure can be use to create any customized R based visual.
+
 ---
 
 These are the basic steps to follow:
@@ -39,8 +42,11 @@ To initialize a new custom visual type the following:
 When there are no errors you can hit Ctrl+C to stop the process. But don't close the console window yet.
 
 ---
-*Note:*
-Use only characters and numbers in your package name since special characters (even '-') can throw errors when `pbiviz start` is executed.
+
+**NOTE**
+
+Use only characters and numbers in your package name since special characters (even "-") can throw errors when `pbiviz start` is executed.
+
 ---
 
 ## 3. Edit the R code
@@ -105,7 +111,7 @@ This folder should keep a file `pbi3Dscatter.pbiviz`.
 
 In PowerBI you can now load this visual:
 
-![Import custom visual](images/pbi_import.png "Import custom visual")
+![Figure 1: Import a custom visual.](images/pbi_import.png "Import custom visual")
 
 In our example script the value names are hardcoded ```x = ~wt, y = ~hp, z = ~qsec, color = ~cyl```.
 Therefore the variables that are added to the values field of the visual need to have the exact names.
@@ -114,4 +120,4 @@ If you get only one point in your visual, then check if your variable values are
 
 The result should look like in the picture below:
 
-![Import custom visual](images/result.png "Import custom visual")
+![Figure 2: Result.](images/result.png "Import custom visual")
