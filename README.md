@@ -7,9 +7,7 @@ This visual and walkthrough is based on [this RPubs article by John Friel](https
 
 ---
 
-**NOTE**
-
-Although in this case these steps are used to produce a 3D scatter custom visual the procedure can be use to create any customized R based visual.
+**NOTE:** Although in this case these steps are used to produce a 3D scatter custom visual the procedure can be use to create any customized R based visual.
 
 ---
 
@@ -43,9 +41,7 @@ When there are no errors you can hit Ctrl+C to stop the process. But don't close
 
 ---
 
-**NOTE**
-
-Use only characters and numbers in your package name since special characters (even "-") can throw errors when `pbiviz start` is executed.
+**NOTE:** Use only characters and numbers in your package name since special characters (even "-") can throw errors when `pbiviz start` is executed.
 
 ---
 
