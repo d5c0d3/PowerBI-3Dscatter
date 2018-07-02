@@ -39,6 +39,18 @@
 
     {
 
+      "displayName": "Size",
+
+      "description": "Numeric variable",
+
+      "kind": "GroupingOrMeasure",
+
+      "name": "size"
+
+    },
+
+    {
+
       "displayName": "Color",
 
       "description": "Numeric or factor variable for coloring of the scatter points",
@@ -84,6 +96,12 @@
           },
 
           "z": {
+
+            "max": 1
+
+          },
+
+          "size": {
 
             "max": 1
 
@@ -140,6 +158,16 @@
                   "for": {
 
                     "in": "z"
+
+                  }
+
+                },
+
+                {
+
+                  "for": {
+
+                    "in": "size"
 
                   }
 
