@@ -1,0 +1,27 @@
+{
+  "visual": {
+    "name": "pbi3Dscatter",
+    "displayName": "pbi3Dscatter",
+    "guid": "pbi3DscatterA8CEBCED61DD44749469A6476D9C3146",
+    "visualClassName": "Visual",
+    "version": "1.0.0",
+    "description": "3D scatter chart",
+    "supportUrl": "",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "1.7.0",
+  "author": {
+    "name": "",
+    "email": ""
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [
+    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js"
+  ],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": "dependencies.json",
+  "stringResources": []
+}

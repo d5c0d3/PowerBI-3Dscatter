@@ -33,7 +33,7 @@ To initialize a new custom visual type the following:
 ```ShellSession
 > pbiviz new pbi3Dscatter -t rhtml
 > cd powerBI-3Dscatter
-> npm i powerbi-visuals-utils-dataviewutils
+> npm i powerbi-visuals-utils-dataviewutils ### this step is obsolete i think
 > pbiviz start
 ```
 
@@ -68,7 +68,7 @@ internalSaveWidget(p, 'out.html');
 ####################################################
 ```
 
-Change the code to look like below and save your changes. You could also download the `script.r` file in the base map of this repository and replace the respective file in your package folder.
+Change the code to look like below and save your changes. You could also download the `script.r_original` file in the base map of this repository and replace the respective file in your package folder.
 
 ```R
 source('./r_files/flatten_HTML.r')
