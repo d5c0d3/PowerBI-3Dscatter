@@ -31,6 +31,23 @@ if(!exists("x") || !exists("y") || !exists("z")) # invalid input
 if(validToPlot)
 
 {
+
+
+        #droplines
+        dl_set <- dataset
+        names(dl_set) <- c("x", "y", "z")
+        dl_set$id <- seq_len(nrow(dl_set))
+        dl <- replicate(2, dl_set, simplify = F)
+        dlz <- dl
+        dlz[[2]]$z <- min(dl_set$z)
+        dlz <- group2NA(bind_rows(dlz), "id")
+        dlx <- dl
+        dlx[[2]]$x <- min(dl_set$x)
+        dlx <- group2NA(bind_rows(dlx), "id")
+        dly <- dl
+        dly[[2]]$y <- min(dl_set$y)
+        dly <- group2NA(bind_rows(dly), "id")
+
         size_var_exists <- FALSE
         if(exists("size"))
 
@@ -69,7 +86,10 @@ if(validToPlot)
                             sizes = c(5,20),
                             color = if (color_var_exists) as.formula(paste0("~`", colNames[5], "`")),
                             colors = c('#BF382A', '#0C4B8E')) %>%
-                layout(margin=m)
+                layout(margin=m) %>%
+        add_paths(data = dlz, x = ~x, y = ~y, z = ~z, color=I("grey"), showlegend=F, text="test") %>%
+        add_paths(data = dlx, x = ~x, y = ~y, z = ~z, color=I("grey"), showlegend=F, text="test") %>%
+        add_paths(data = dly, x = ~x, y = ~y, z = ~z, color=I("grey"), showlegend=F, text="test")
 
 
 };
